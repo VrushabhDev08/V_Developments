@@ -1,0 +1,8 @@
+
+**** Build of configuration Debug for project I2C_SLAVE ****
+
+"C:\\ti\\ccs1210\\ccs\\utils\\bin\\gmake" -k -j 2 all -O 
+ 
+gmake[1]: 'I2C_SLAVE.out' is up to date.
+
+**** Build Finished ****

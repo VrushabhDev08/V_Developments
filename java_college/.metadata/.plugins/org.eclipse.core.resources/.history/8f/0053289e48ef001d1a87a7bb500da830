@@ -1,0 +1,26 @@
+package Practice_1;
+import java.io.*;
+import java.nio.file.*;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.*;
+import java.io.File;
+public class Exp_9 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		String filepath="G:\\22.txt";
+		FileOutputStream fos = new FileOutputStream(filepath);
+		DataOutputStream dos = new DataOutputStream(fos);
+		dos.writeUTF("Students information");
+		dos.writeUTF("vrushabh");
+		dos.writeInt(77);
+		dos.writeFloat((float) 4.5);
+		fos.close();
+		dos.close();
+		
+
+	}
+
+}

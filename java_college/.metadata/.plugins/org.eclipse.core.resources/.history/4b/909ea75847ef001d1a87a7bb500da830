@@ -1,0 +1,15 @@
+package Practice_1;
+import java.io.*;
+import java.nio.file.*;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.util.*;
+import java.io.File;
+public class Exp_9 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

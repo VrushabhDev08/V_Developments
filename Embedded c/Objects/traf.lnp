@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\traffic1.obj" 
+TO ".\Objects\traf" 
+PRINT(".\Listings\traf.m51") CODE( 0X0000-0X0FFF )

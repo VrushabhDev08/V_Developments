@@ -1,0 +1,28 @@
+package Expe_10; 
+import java.io.*;
+import java.util.Scanner;
+
+public class Exp_10_ {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+				File file = new File(args[0]);
+				Scanner sc = new Scanner(file);
+				String str1 = ""; 
+				String str2 = ""; 
+				while(sc.hasNextLine()) {
+					str1 = str1 + sc.nextLine();
+				} 
+				String st[] = str1.split(" ");
+				for (int i = 0;i<st.length;i++) {
+					str2 = str2 + st[i];
+				}
+				FileWriter w = new FileWriter(file);
+				w.write(str2);
+				w.close();
+				sc.close();
+
+
+	}
+
+}

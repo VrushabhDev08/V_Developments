@@ -1,0 +1,29 @@
+package Practice_1;
+import java.io.*;
+import java.io.IOException;
+import java.nio.file.*;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.util.*;
+
+public class Exp_8 {
+
+	public static void main(String[] args)throws IOException {
+		// TODO Auto-generated method stub
+		File file1 = new File("G:\\vrush.txt");
+		System.out.println("File was created");
+		String data1=" ";
+		Scanner sc=new Scanner(System.in);
+		Scanner fileip=new Scanner(file1);
+		System.out.println("The file contents are");
+		while(fileip.hasNextLine())
+		{
+			String data = fileip.nextLine();
+			data1=data1.concat(data+" ");
+			System.out.println(data);
+		}
+		
+
+	}
+
+}

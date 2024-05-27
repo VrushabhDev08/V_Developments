@@ -1,0 +1,12 @@
+package Practice_1;
+import java.io.*;
+import java.util.*;
+public class Exp_10 {
+
+	public static void main(String[] args)throws IOException {
+		// TODO Auto-generated method stub
+		File f1 = new File();
+
+	}
+
+}

@@ -1,0 +1,6 @@
+"./ interpt_1.obj"
+"./int_GPIO.obj"
+"./tm4c123gh6pm_startup_ccs.obj"
+"../driverlib.lib"
+"../tm4c123gh6pm.cmd"
+-llibc.a

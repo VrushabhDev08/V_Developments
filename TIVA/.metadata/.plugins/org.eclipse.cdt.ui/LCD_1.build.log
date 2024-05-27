@@ -1,0 +1,8 @@
+
+**** Build of configuration Debug for project LCD_1 ****
+
+"C:\\ti\\ccs1210\\ccs\\utils\\bin\\gmake" -k -j 2 all -O 
+ 
+gmake[1]: 'LCD_1.out' is up to date.
+
+**** Build Finished ****

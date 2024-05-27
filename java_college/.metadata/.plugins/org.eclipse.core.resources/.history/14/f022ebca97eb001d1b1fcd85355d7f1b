@@ -1,0 +1,39 @@
+package Exp_9;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Experiments_9_ {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		String filepath="D:\\20UET009\\a1.txt";
+		FileOutputStream Fos=new FileOutputStream(filepath);
+		DataOutputStream dos=new DataOutputStream(Fos);
+		dos.writeUTF("Student Information");
+		dos.writeUTF("Pratik");
+		dos.writeInt(75);
+		dos.writeInt(24);
+		dos.writeDouble(80);
+		dos.writeDouble(8.565);
+		dos.writeUTF("Maharastra");
+		dos.close();
+		Fos.close();
+		FileInputStream Fis=new FileInputStream(filepath);
+		DataInputStream dis=new DataInputStream(Fis);
+		System.out.println(dis.readUTF());
+		System.out.println(dis.readUTF());
+		System.out.println(dis.readInt());
+		System.out.println(dis.readInt());
+		System.out.println(dis.readDouble());
+		System.out.println(dis.readDouble());
+		System.out.println(dis.readUTF());
+		dis.close();
+		Fis.close();
+	}
+	}
+
+

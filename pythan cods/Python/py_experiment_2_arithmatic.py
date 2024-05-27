@@ -1,0 +1,11 @@
+a = int(input("Enter num1:"))
+b = int(input("Enter num2:"))
+print("Arithmatic Operaters:")
+print("The addition of A & B is:",a+b)
+print("The subtraction of A & B is:",a-b)
+print("The multiplication of A & B is:",a*b)
+print("The division of A & B is:",a/b)
+print("The modulus of A & B is:",a%b)
+print("The exponent of A & B is:",a**b)
+print("The floor division of A & B is:",a//b)
+
