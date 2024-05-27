@@ -19,4 +19,5 @@ int main()
   int a;
   cout<<"jai shri ram"<<endl;
   cin>>a;
+  cout<<"Jai Hanuman";
 }
