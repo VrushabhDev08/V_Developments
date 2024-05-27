@@ -22,4 +22,5 @@ int main()
   cout<<"Jai Hanuman";
   cin>>b;
     cout<<"Vrushabh Bastwade";
+        cout<<"Vrushabh Bastwade";
 }
