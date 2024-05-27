@@ -16,8 +16,9 @@ int main()
     cout<<"Hi "<<h1[i].set_health(5)<<endl;
     cout<<h1[0]->Hero(5)<<endl;
   }*/
-  int a;
+  int a,b;
   cout<<"jai shri ram"<<endl;
   cin>>a;
   cout<<"Jai Hanuman";
+  cin>>b;
 }
