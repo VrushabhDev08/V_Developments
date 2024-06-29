@@ -5,8 +5,7 @@
 
 const char* ssid = "Room506 507";
 const char* password = "9637760123";
-const char* Gemini_Token = "AIzaSyCnUaZ7cW2hjhVevlEzQeyjcD90O155QcE";
-const char* Gemini_Max_Tokens = "500";
+const char* Gemini_Max_Tokens = "10";
 String res = "";
 
 
@@ -17,8 +16,7 @@ void setup() {
   WiFi.disconnect();
 
 
-  while (!Serial)
-    ;
+  while (!Serial);
 
 
   // wait for WiFi connection
@@ -34,14 +32,14 @@ void setup() {
   Serial.println(WiFi.localIP());
 }
 
-void loop() 
+void loop()
 {
   Serial.println("");
   Serial.println("Ask your Question : ");
   while (!Serial.available())
     ;
   while (Serial.available()) {
-    char add = ("what is the square of %d",randomSquare());
+    char add = Serial.read();
     res = res + add;
     delay(1);
   }
@@ -79,7 +77,7 @@ void loop()
       String Answer = doc["candidates"][0]["content"]["parts"][0]["text"];
 
 
-      
+
       // For Filtering our Special Characters, WhiteSpaces and NewLine Characters
       Answer.trim();
       String filteredAnswer = "";

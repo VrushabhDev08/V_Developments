@@ -7,7 +7,7 @@ const char* ssid = "Room506 507";
 const char* password = "9637760123";
 
 // Replace with your OpenWeatherMap API key and city
-const char* apiKey = "c04ebd2c506c424c6e447b74e398cb9a";
+
 const char* city = "London";
 
 void setup() {
