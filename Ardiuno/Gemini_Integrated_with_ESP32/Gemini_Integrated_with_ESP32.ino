@@ -8,7 +8,6 @@ const char* password = "9637760123";
 const char* Gemini_Max_Tokens = "10";
 String res = "";
 
-
 void setup() {
   Serial.begin(115200);
 
@@ -31,6 +30,9 @@ void setup() {
   Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
 }
+
+
+
 
 void loop()
 {
