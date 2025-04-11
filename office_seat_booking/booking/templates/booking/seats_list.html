@@ -1,0 +1,28 @@
+<!-- booking/templates/booking/seats_list.html -->
+<h2>Available Seats</h2>
+<form method="post" action="{% url 'book_seat' %}">
+    {% csrf_token %}
+    <table>
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th>Asset</th>
+                <th>Seat Number</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for seat in seats_list %}
+            <tr>
+                <td><input type="checkbox" name="seat_ids" value="{{ seat.id }}"></td>
+                <td>{{ seat.asset }}</td>
+                <td>{{ seat.seat_number }}</td>
+                <td>{{ seat.date }}</td>
+                <td>{{ seat.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button type="submit">Book Selected Seats</button>
+</form>

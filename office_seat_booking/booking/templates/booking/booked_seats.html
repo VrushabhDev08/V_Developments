@@ -1,0 +1,20 @@
+<!-- booking/templates/booking/booked_seats.html -->
+<h2>Booked Seats</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Asset</th>
+            <th>Seat Number</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for seat in booked_seats %}
+        <tr>
+            <td>{{ seat.asset }}</td>
+            <td>{{ seat.seat_number }}</td>
+            <td>{{ seat.date }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

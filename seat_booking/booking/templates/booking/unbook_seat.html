@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unbook Seat</title>
+</head>
+<body>
+    <h1>Unbook Seat - {{ seat.seat_name }}</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <p>Are you sure you want to unbook this seat?</p>
+        <button type="submit">Unbook Seat</button>
+    </form>
+</body>
+</html>

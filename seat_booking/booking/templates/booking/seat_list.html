@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seat Booking</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .button-book {
+            background-color: #4CAF50; /* Green background */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button-book:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Available Seats - {{ category }}</h1>
+    <form method="GET" action="">
+        <label for="category">Category:</label>
+        <select name="category" id="category" onchange="this.form.submit()">
+            <option value="2TIER" {% if category == '2TIER' %}selected{% endif %}>2TIER</option>
+            <option value="3TIER" {% if category == '3TIER' %}selected{% endif %}>3TIER</option>
+            <option value="HAT" {% if category == 'HAT' %}selected{% endif %}>HAT</option>
+        </select>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Asset Name</th>
+                <th>Seat Name</th>
+                <th>Table Name</th>
+                <th>Date</th>
+                <th>Booked By</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for seat in seats %}
+            <tr>
+                <td>{{ seat.asset_name }}</td>
+                <td>{{ seat.seat_name }}</td>
+                <td>{{ seat.table_name }}</td>
+                <td>{{ seat.date }}</td>
+                <td>{{ seat.booked_by }}</td>
+                <td>
+                    {% if seat.is_available %}
+                        <a href="{% url 'book_seat' seat.pk %}" class="button-book">Book</a>
+                    {% else %}
+                        <span>Unavailable</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

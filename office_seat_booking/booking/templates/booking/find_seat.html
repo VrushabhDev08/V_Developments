@@ -1,0 +1,17 @@
+<!-- booking/templates/booking/find_seat.html -->
+<h2>Find Seats</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="date">Date:</label>
+    <input type="date" name="date" required>
+    <label for="seating_type">Seating Type:</label>
+    <select name="seating_type" required>
+        <option value="2TIER">2TIER</option>
+        <option value="3TIER">3TIER</option>
+        <option value="HAT">HAT</option>
+    </select>
+    <button type="submit">Find Seats</button>
+</form>
+{% if error %}
+<p>{{ error }}</p>
+{% endif %}

@@ -1,0 +1,6 @@
+<h1>My Bookings</h1>
+<ul>
+    {% for booking in bookings %}
+        <li>{{ booking.seat.seat_number }} booked on {{ booking.booking_date }}</li>
+    {% endfor %}
+</ul>
